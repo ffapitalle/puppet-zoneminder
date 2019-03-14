@@ -1,6 +1,6 @@
-# A description of what this class does
+# This class will install zoneminder
 #
-# @summary A short summary of the purpose of this class
+# @summary This class will install zoneminder
 #
 # @example
 #   include zoneminder
