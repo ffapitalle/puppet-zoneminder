@@ -4,7 +4,7 @@
 #
 # @example
 #   include zoneminder
-class zoneminder {
+class zoneminder (
   String $package_ensure     = $zoneminder::params::package_ensure,
   String $package_name       = $zoneminder::params::package_name,
 
