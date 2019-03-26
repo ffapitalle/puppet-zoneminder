@@ -1,1 +1,14 @@
 ---
+zoneminder::package_name: 'zoneminder'
+zoneminder::package_ensure: 'present'
+zoneminder::service_name: 'zoneminder'
+zoneminder::service_ensure: 'running'
+zoneminder::service_enable: true
+zoneminder::custom_conf_file: '05_custom.conf'
+zoneminder::run_user: 'www-data'
+zoneminder::run_group: 'www-data'
+zoneminder::db_package_name: 'mariadb-server'
+zoneminder::dbhost: 'localhost'
+zoneminder::dbname: 'zm'
+zoneminder::dbuser: 'zmuser'
+zoneminder::dbpass: 'zmpass'

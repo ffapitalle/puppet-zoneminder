@@ -6,7 +6,8 @@
 # @example
 #   include zoneminder::config
 class zoneminder::config inherits zoneminder {
-    file { ['/etc/zm', '/etc/zm/conf.d']:
+
+  file { ['/etc/zm', '/etc/zm/conf.d']:
     ensure  => directory,
     owner   => 'root',
     group   => $zoneminder::run_group,
@@ -15,7 +16,7 @@ class zoneminder::config inherits zoneminder {
     force   => true,
   }
 
-  file { "/etc/zm/conf.d/${zoneminder::zoneminder_conf}":
+  file { "/etc/zm/conf.d/${zoneminder::custom_conf_file}":
     ensure  => file,
     owner   => 'root',
     group   => $zoneminder::run_group,
