@@ -23,10 +23,10 @@ class zoneminder (
   String $dbpass             = $zoneminder::params::dbpass,
 ) inherits zoneminder::params {
 
-  anchor { 'zoneminder::begin': } ->
-  class { '::zoneminder::config': } ->
-  class { '::zoneminder::install': } ->
-  class { '::zoneminder::service': } ->
-  anchor { 'zoneminder::end': }
+  anchor { 'zoneminder::begin': }
+  -> class { '::zoneminder::config': }
+  -> class { '::zoneminder::install': }
+  -> class { '::zoneminder::service': }
+  -> anchor { 'zoneminder::end': }
 
 }
